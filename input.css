@@ -70,14 +70,14 @@
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
     right: -37px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
     left: -34px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
 }
 
@@ -86,14 +86,14 @@
     .swiper-button-next,
     .swiper-rtl .swiper-button-prev {
         right: 10px;
-        top: 50%;
+        top: 60%;
         transform: translateY(-50%);
     }
 
     .swiper-button-prev,
     .swiper-rtl .swiper-button-next {
         left: 10px;
-        top: 50%;
+        top: 60%;
         transform: translateY(-50%);
     }
 
@@ -103,3 +103,8 @@
         font-size: 14px;
     }
 }
+
+
+
+
+

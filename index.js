@@ -15,35 +15,24 @@
 
 
 
-
-
-
-
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-    1024: {
-      slidesPerView: 3,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-  },
-});
-
- const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
-
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
   });
