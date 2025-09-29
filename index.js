@@ -1,52 +1,49 @@
 
-// navigator stcky
- const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY >= 200) {
-      navbar.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'z-50');
-      navbar.classList.remove('container', 'mx-auto'); // remove container width so it stretches full width
-    } else {
-      navbar.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'z-50');
-      navbar.classList.add('container', 'mx-auto');
-    }
-  });
+(() => {
+  const el = document.getElementById('role');
+  if (!el) return;
+  const t = el.dataset.text || el.textContent || '';
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return el.textContent = t;
+  let i = 0, d = false;
+  const tick = () => {
+    el.textContent = t.slice(0, i);
+    if (!d ? i++ === t.length ? setTimeout(() => { d = true; tick(); }, 1500) : setTimeout(tick, 80)
+      : i-- === 0 ? (d = false, setTimeout(tick, 300)) : setTimeout(tick, 40));
+  };
+  setTimeout(tick, 250);
+})();
 
 
 
-//   navbar Response icon
+
+
+
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
 
  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const dropdownBtn = document.getElementById('mobile-dropdown-btn');
-  const dropdown = document.getElementById('mobile-dropdown');
+  const menu = document.getElementById('menu');
 
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
-  });
-
-  dropdownBtn.addEventListener('click', () => {
-    dropdown.classList.toggle('hidden');
-  });
-
-
-
-// counter Up
-
- const counters = document.querySelectorAll(".counter");
-  const speed = 200; // Lower = faster
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute("data-target");
-      const count = +counter.innerText;
-      const increment = target / speed;
-
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 20);
-      } else {
-        counter.innerText = target;
-      }
-    };
-
-    updateCount();
   });

@@ -2,244 +2,258 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="./output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./output.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navigation start -->
 
-<nav id="navbar" class="container mx-auto py-4 flex items-center justify-between px-4 md:px-0 transition-all duration-300">
-  <!-- Logo -->
-  <div class="rounded-full bg-gray-100 p-1 w-12 h-12 flex items-center justify-center">
-    <img src="/images/logo.png" alt="Logo" class="w-full h-full object-cover" />
-  </div>
-
-  <!-- Desktop Menu -->
-  <div class="hidden md:flex w-full justify-between items-center gap-4">
-    <div class="flex gap-8 items-center">
-      <a href="#" class="cursor-pointer hover:text-blue-500 ms-4">Home</a>
-      <div class="relative group">
-        <p class="cursor-pointer hover:text-blue-500 flex items-center gap-1">
-          Channel <i class="fa-solid fa-chevron-down text-sm"></i>
-        </p>
-        <div class="absolute top-full left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-40">
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Channel 1</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Channel 2</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Channel 3</a>
-        </div>
-      </div>
-      <a href="#" class="cursor-pointer hover:text-blue-500">Support</a>
-      <a href="#" class="cursor-pointer hover:text-blue-500">About</a>
-      <a href="#" class="cursor-pointer hover:text-blue-500"><i class="fa-solid fa-magnifying-glass"></i></a>
-    </div>
-    <div class="flex gap-4 items-center">
-      <a href="#" class="flex gap-2 items-center cursor-pointer">
-        <i class="fa-solid fa-lock text-gray-600 text-lg"></i>
-        <span>Login</span>
-      </a>
-      <a href="#" class="bg-[#0092E4] px-6 py-2 text-md text-white rounded-sm">Donate Now</a>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-amber-600">Portfolio.</h1>
+    <ul class="hidden md:flex space-x-6 font-medium">
+      <li><a href="#About" class="text-amber-600">About</a></li>
+      <li><a href="#Skills" class="border-animat">Skills</a></li>
+      <li><a href="#Projects" class="border-animat">Projects</a></li>
+      <li><a href="#Contact" class="border-animat">Contact</a></li>
+    </ul>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-amber-600 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </div>
 
-  <!-- Mobile Hamburger -->
-  <div class="md:hidden">
-    <button id="menu-btn" class="text-2xl focus:outline-none">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+  <div id="menu" class="hidden md:hidden px-6 pb-4">
+    <ul class="space-y-3 font-medium">
+      <li><a href="#About" class="text-amber-600">About</a></li>
+      <li><a href="#Skills" class="border-animat">Skills</a></li>
+      <li><a href="#Projects" class="border-animat">Projects</a></li>
+      <li><a href="#Contact" class="border-animat">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
+<section class="lg:min-h-screen bg-amber-50">
+  <div class="max-w-7xl mx-auto px-6 pt-28 flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+    <div class="w-full md:w-1/2 animate-fadeIn text-center md:text-left">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
+        Hi, I'm Arif <i class="fa-solid fa-laptop-code text-amber-600"></i>
+      </h2>
+      <div class="text-xl sm:text-2xl lg:text-3xl py-6 sm:py-10">
+        <span id="role" class="font-semibold text-amber-600" aria-live="polite" data-text="Software Engineer">
+          Software Engineer
+        </span>
+        <span class="inline-block align-middle" id="caret" aria-hidden="true"></span>
+        <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-600 max-w-lg md:max-w-2xl mx-auto md:mx-0">
+          A passionate developer who loves building modern web applications and solving complex problems with clean code.
+        </p>
+      </div>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 px-4">
-  <a href="#" class="block py-2">Home</a>
-  <div>
-    <button id="mobile-dropdown-btn" class="w-full text-left flex justify-between items-center py-2">
-      Channel <i class="fa-solid fa-chevron-down"></i>
-    </button>
-    <div id="mobile-dropdown" class="hidden pl-4">
-      <a href="#" class="block py-2">Channel 1</a>
-      <a href="#" class="block py-2">Channel 2</a>
-      <a href="#" class="block py-2">Channel 3</a>
-    </div>
-  </div>
-  <a href="#" class="block py-2">Support</a>
-  <a href="#" class="block py-2">About</a>
-  <a href="#" class="block py-2">Login</a>
-  <a href="#" class="block py-2 bg-[#0092E4] text-white text-center rounded-sm mt-2">Donate Now</a>
-</div>
- <!-- Navigation ends -->
-
-
-<!-- hero section starts here -->
-<section class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between py-10 gap-8">
-  <!-- Text Section -->
-  <div class="flex-1 flex flex-col gap-4 md:order-1 text-center md:text-left md:bg-white md:hover:shadow-2xl transition-shadow duration-300 p-4 md:p-6 rounded-lg">
-    <h1 class="text-4xl md:text-5xl font-bold"><span class="text-blue-500 leading-tight">Tailwindcss My </span> Protfolio Beluderap</h1>
-    <h2 class="text-2xl font-semibold text-gray-700">Msasoft</h2>
-    <p class="text-lg text-gray-500">Complete software solution</p>
-
-    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mt-4 justify-center md:justify-start">
-      <button class="bg-[#0092E4] text-white px-6 py-2 rounded hover:bg-blue-700 transition">Get Token</button>
-
-      <div class="flex items-center gap-2 cursor-pointer text-blue-600 hover:text-blue-800 transition">
-        <span>White Paper</span>
-        <i class="fa-solid fa-circle-play"></i>
+      <div class="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-4  sm:mb-20">
+        <a href="#projects"
+          class="px-6 py-3 bg-amber-600 text-white rounded-lg shadow hover:bg-amber-700 transition text-sm sm:text-base flex items-center justify-center">
+          <i class="fa-solid fa-folder-open mr-2"></i>View Projects
+        </a>
+        <a href="#contact"
+          class="px-6 py-3 border border-amber-600 text-amber-600 rounded-lg hover:bg-amber-100 transition text-sm sm:text-base flex items-center justify-center">
+          <i class="fa-solid fa-envelope mr-2"></i>Contact Me
+        </a>
       </div>
     </div>
-  </div>
-  <!-- Image Section -->
- <div class="flex-1 md:order-2 flex justify-center md:justify-end mb-6 md:mb-0">
-  <img src="/images/full-stack.png"  alt="Hero Image" class="w-[500px] h-[500px]  object-cover shadow-lg">
-</div>
-</section>
- <!-- hero section starts here -->
-
-
-
- <!-- gird card section -->
-    <section class="bg-[#EEF5FF] my-10 py-10">
-  <!-- Heading Section -->
-  <div class="text-center py-6 px-4">
-    <p class="text-md text-[#0092E4] font-bold">Service We Work For</p>
-    <h2 class="text-2xl md:text-3xl font-bold">What Care We Do For Your Career</h2>
-  </div>
-  <!-- Services Section -->
-  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-0">
-    <!-- Card 1 -->
-    <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
-      <i class="fa-regular fa-hand-peace text-4xl text-[#0092E4] mb-4"></i>
-      <h2 class="text-xl font-semibold mb-2">Coding</h2>
-      <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, necessitatibus?</p>
-      <button class="bg-[#0092E4] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Learn More</button>
-    </div>
-    <!-- Card 2 -->
-    <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
-      <i class="fa-regular fa-hand-peace text-4xl text-[#0092E4] mb-4"></i>
-      <h2 class="text-xl font-semibold mb-2">Design</h2>
-      <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, necessitatibus?</p>
-      <button class="bg-[#0092E4] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Learn More</button>
-    </div>
-    <!-- Card 3 -->
-    <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
-      <i class="fa-regular fa-hand-peace text-4xl text-[#0092E4] mb-4"></i>
-      <h2 class="text-xl font-semibold mb-2">Marketing</h2>
-      <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, necessitatibus?</p>
-      <button class="bg-[#0092E4] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Learn More</button>
+    <div class="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
+      <img src="images/arif-sir.jpg" alt="Arif"
+        class="w-48 sm:w-64 md:w-80 lg:w-[450px] xl:w-[500px] rounded-lg shadow-xl transform transition duration-700 hover:scale-105 hover:rotate-1">
     </div>
   </div>
 </section>
- <!-- gird card section -->
 
 
+  <!-- About Section -->
 
-<!-- count section start here -->
-<div class="container mx-auto my-10 px-4">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
-    <!-- Counter 1 -->
-    <div class="p-4">
-      <p class="text-4xl font-bold text-[#0092E4] counter" data-target="250">0</p>
-      <span class="text-lg text-gray-700">Successful Projects</span>
+  <section id="About" class="max-w-7xl mx-auto px-6 py-20 transition duration-400">
+    <div class="flex justify-betweena items-center">
+      <div class="md:w-1/2 flex justify-center"> <img src="images/arif-sir.jpg" alt="Arif"
+          class="w-[250px] md:w-[350px] lg:w-[400px] rounded-lg shadow-xl transform transition duration-700 hover:scale-105 hover:rotate-1">
+      </div>
+      <div class="">
+        <h2 class="text-3xl font-bold text-center mb-10"> <span class="border-b-4 border-amber-600">About Me</span></h2>
+        <p class="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto"> I'm Arif, a Software Engineer
+          with
+          experience in developing scalable, efficient, and user-friendly applications. I enjoy learning new
+          technologies
+          and always aim to write clean and maintainable code. </p>
+      </div>
     </div>
-    <!-- Counter 2 -->
-    <div class="p-4">
-      <p class="text-4xl font-bold text-[#0092E4] counter" data-target="2250">0</p>
-      <span class="text-lg text-gray-700">Happy Clients</span>
+  </section>
+
+  <!-- Skills Section -->
+
+  <section id="Skills" class="bg-gray-200 py-20 transition duration-400 ">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-10 text-gray-700"><span
+          class="border-b-4 border-amber-600">Skills</span></h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="costom-style"> HTML</div>
+        <div class="costom-style1">CSS / Tailwind</div>
+        <div class="costom-style">JavaScript</div>
+        <div class="costom-style1">React.js</div>
+        <div class="costom-style">Node.js</div>
+        <div class="costom-style1">Express.js</div>
+        <div class="costom-style">MongoDB</div>
+        <div class="costom-style1">Git / GitHub</div>
+      </div>
     </div>
-    <!-- Counter 3 -->
-    <div class="p-4">
-      <p class="text-4xl font-bold text-[#0092E4] counter" data-target="250">0</p>
-      <span class="text-lg text-gray-700">Cups of Coffee</span>
+  </section>
+
+<!-- Projects Section -->
+<section id="Projects" class="max-w-7xl mx-auto px-6 py-20 relative">
+  <h2 class="text-3xl font-bold text-center mb-10">
+    <span class="border-b-4 border-amber-500 pb-1">Projects</span>
+  </h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 border border-amber-500 w-full max-w-xs mx-auto">
+          <div class="w-full flex justify-center mb-4">
+            <img src="images/card.jpg" alt="Arif"
+              class="w-56 h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-lg shadow-xl transform transition duration-700 hover:scale-105 hover:rotate-1">
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">Portfolio Website</h3>
+          <p class="text-gray-600 text-center text-sm md:text-base">A personal portfolio website built using TailwindCSS.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 border border-amber-500 w-full max-w-xs mx-auto">
+          <div class="w-full flex justify-center mb-4">
+            <img src="images/card.jpg" alt="Arif"
+              class="w-56 h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-lg shadow-xl transform transition duration-700 hover:scale-105 hover:rotate-1">
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">E-commerce App</h3>
+          <p class="text-gray-600 text-center text-sm md:text-base">Full-stack e-commerce application with payment integration.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 border border-amber-500 w-full max-w-xs mx-auto">
+          <div class="w-full flex justify-center mb-4">
+            <img src="images/card.jpg" alt="Arif"
+              class="w-56 h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-lg shadow-xl transform transition duration-700 hover:scale-105 hover:rotate-1">
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">Chat Application</h3>
+          <p class="text-gray-600 text-center text-sm md:text-base">Real-time chat app using Node.js, Express, and Socket.io.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 border border-amber-500 w-full max-w-xs mx-auto">
+          <div class="w-full flex justify-center mb-4">
+            <img src="images/card.jpg" alt="Arif"
+              class="w-56 h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-lg shadow-xl transform transition duration-700 hover:scale-105 hover:rotate-1">
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">Another Project</h3>
+          <p class="text-gray-600 text-center text-sm md:text-base">Description for another project goes here.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<!-- count section ends here -->
-
-
-
-
-
-
-
-   
-
-<!-- footer sections strat  -->
-
-<section class="bg-gray-900 text-white py-10 p-3">
-  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-center">
-    
-    <!-- Column 1 -->
-    <div>
-      <h3 class="text-lg font-bold mb-4">Company</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="common_classs">About Us</a></li>
-        <li><a href="#" class="common_classs">Careers</a></li>
-        <li><a href="#" class="common_classs">Press</a></li>
-      </ul>
     </div>
-
-    <!-- Column 2 -->
-    <div>
-      <h3 class="text-lg font-bold mb-4">Products</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="common_classs">Features</a></li>
-        <li><a href="#" class="common_classs">Pricing</a></li>
-        <li><a href="#" class="common_classs">Documentation</a></li>
-      </ul>
+    <div
+      class="swiper-button-prev !w-12 !h-12 bg-amber-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-amber-600 transition">
     </div>
-
-    <!-- Column 3 -->
-    <div>
-      <h3 class="text-lg font-bold mb-4">Resources</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="common_classs">Blog</a></li>
-        <li><a href="#" class="common_classs">Guides</a></li>
-        <li><a href="#" class="common_classs">Help Center</a></li>
-      </ul>
+    <div
+      class="swiper-button-next !w-12 !h-12 bg-amber-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-amber-600 transition">
     </div>
-
-    <!-- Column 4 -->
-    <div>
-      <h3 class="text-lg font-bold mb-4">Legal</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="common_class">Terms</a></li>
-        <li><a href="#" class="common_class">Privacy</a></li>
-        <li><a href="#" class="common_class">Cookies</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 5 -->
-    <div>
-      <h3 class="text-lg font-bold mb-4">Contact</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="common_class">Email Us</a></li>
-        <li><a href="#" class="common_class">Support</a></li>
-        <li><a href="#" class="common_class">Locations</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="text-center mt-10 text-gray-400">
-    &copy; 2025 Your Company. All rights reserved.
-  </div>
 </section>
 
 
-<!-- footer sections strat  -->
+
+  <!-- Contact Section -->
+  <section id="Contact" class="bg-amber-50 py-20 transition duration-400 ">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-center text-3xl font-bold mb-12"><span class="border-b-3 border-amber-600">Contact Me</span></h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6 text-gray-700">
+          <h3 class="text-4xl font-semibold ">Let's Connect</h3>
+          <p class="text-lg">
+            I’d love to hear from you! Whether you have a question, a project idea,
+            or just want to say hi — feel free to reach out using the form.
+          </p>
+          <ul class="space-y-3">
+            <li><span class="font-semibold text-lg"> Address:</span> Dhaka, Bangladesh</li>
+            <li><span class="font-semibold text-lg"> Email:</span> example@email.com</li>
+            <li><span class="font-semibold text-lg"> Phone:</span> +880 1234-567890</li>
+          </ul>
+        </div>
+        <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-lg space-y-6">
+          <div>
+            <label for="name" class="block text-left font-medium text-gray-700">Your Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:outline-none">
+          </div>
+          <div>
+            <label for="email" class="block text-left font-medium text-gray-700">Your Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:outline-none">
+          </div>
+          <div>
+            <label for="message" class="block text-left font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:outline-none"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-amber-500 text-white font-semibold py-3 rounded-lg hover:bg-amber-600 transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+<footer class="bg-gray-900 text-white py-10 mt-10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div>
+      <h3 class="font-bold text-lg mb-2">About</h3>
+      <p class="text-gray-400 text-sm">I'm Arif, a passionate developer creating modern web experiences.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-2">Quick Links</h3>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-amber-400">Home</a></li>
+        <li><a href="#" class="hover:text-amber-400">Projects</a></li>
+        <li><a href="#" class="hover:text-amber-400">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-2">Follow Me</h3>
+      <div class="flex space-x-4 text-2xl">
+        <a href="#" class="hover:text-amber-400"><i class="fab fa-github"></i></a>
+        <a href="#" class="hover:text-amber-400"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="hover:text-amber-400"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="md:text-right">
+      <p class="text-gray-400 text-sm">© 2025 Arif. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
 
 
 
 
 
-
-
-
-<script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
