@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* .common_class{
+    @apply bg-blue-200 border-2 rounded p-4 border-blue-500 text-gray-800 shadow-lg hover:shadow-2xl
+} */
+
+.comon-btn {
+    @apply bg-white shadow px-2 py-1 rounded hover:bg-green-500 hover:text-white  transition-colors duration-300 cursor-pointer;
+}
+
+
+@keyframes floating {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-7px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-floating {
+  animation: floating 2s ease-in-out infinite;
+}
+
+.common_classs{
+  @apply hover:text-amber-400 hover:underline transition
+}
